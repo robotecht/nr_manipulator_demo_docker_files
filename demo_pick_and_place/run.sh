@@ -11,5 +11,6 @@ clear &&\
             --rm \
             --privileged \
             --name demo_pick_and_place \
+            --net host \
         "\
         -x  -n
