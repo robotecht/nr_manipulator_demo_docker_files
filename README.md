@@ -20,5 +20,5 @@ Build and run the container. The run files automatically update the submodules f
 ```
 cd /nr_manipulator_demo_docker_files/demo_pick_and_place
 ./run.sh
-    ```
+```
 
