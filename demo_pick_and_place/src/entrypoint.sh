@@ -14,5 +14,5 @@ ros2 launch xarm_moveit_config xarm5_moveit_fake.launch.py add_gripper:=true &
 # Then, launch the pick-and-place demo
 ros2 launch xarm_planner xarm5_pick_and_place.launch.py
 
-# Keep the container running (if necessary)
-exec "$@"
+# # Keep the container running (if necessary)
+# exec "$@"

@@ -15,10 +15,6 @@ def run_demo():
 @app.route('/<string:page_name>')
 def html_page(page_name):
     return render_template(page_name)
-# @app.route('/start_demo', methods=['POST','GET'])
-# def start_demo():
-#     return 'running'
-
 @app.route('/start_demo',methods=['POST','GET'])
 def home():
     pick_place()
