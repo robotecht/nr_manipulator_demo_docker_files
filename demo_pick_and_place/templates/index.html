@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Hyperspace by HTML5 UP</title>
+	<title>NR Manipulator Demo</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="static/assets/css/main.css" />
@@ -24,8 +24,9 @@
 			<nav>
 				<ul>
 					<li><a href="#intro">Welcome</a></li>
-					<li><a href="#one">Running Demo</a></li>
-					<li><a href="#two">Instructions</a></li>
+					<li><a href="#one">Choose Demo</a></li>
+					<!-- <li><a href="#demo1">Instructions (SIM)</a></li> -->
+					<li><a href="#demo2">Instructions (SIM + REAL)</a></li>
 					<li><a href="#three">Get in touch</a></li>
 				</ul>
 			</nav>
@@ -43,7 +44,7 @@
 				<form action="start_demo" method="post">
 					<!-- <button type="submit">Start Demo</button> -->
 					<ul class="actions">
-						<li><a href="#one" class="button scrolly">Start Demo</a></li>
+						<li><a href="#one" class="button scrolly">Let's Start</a></li>
 					</ul>
 				</form>
 			</div>
@@ -52,61 +53,50 @@
 		<!-- One -->
 		<section id="one" class="wrapper style2 spotlights">
 			<section>
-				<a href="#" class="image"><img src="static/assets/images/xarm5.jpg" alt="" data-position="center center" /></a>
+				<a href="#" class="image"><img src="static/assets/images/xarm_sim.jpg" alt="" data-position="center center" /></a>
 				<div class="content">
 					<div class="inner">
-						<h2>Xarm and Simulation</h2>
-						<p>Do you want to run the demo on the robot and in simulation?</p>
-						<ul class="actions">
-							<li><a href="generic.html" class="button">Learn more</a></li>
-						</ul>
+						<h2>Simulated</h2>
+						<p>Do you want to run the demo in simulation?
+							No instructions required, just run the demo.
+						</p>
+						<form action="start_demo_sim" method="post">
+							<button type="submit">Run</button>
+						</form>
+						<!-- <ul class="actions">
+							<li><a href="#demo1" class="button">Instructions</a></li>
+						</ul> -->
 					</div>
 				</div>
 			</section>
 			<section>
-				<a href="#" class="image"><img src="static/assets/images/xarm_sim.jpg" alt="" data-position="top center" /></a>
+				<a href="#" class="image"><img src="static/assets/images/xarm5.jpg" alt="" data-position="top center" /></a>
 				<div class="content">
 					<div class="inner">
-						<h2>Simulation</h2>
-						<p>Do you want to run the demo only in simulation?</p>
+						<h2>Simulated and Real</h2>
+						<p>Do you want to run the demo on the robot and in simulation?</p>
 						<ul class="actions">
-							<li><a href="generic.html" class="button">Learn more</a></li>
+							<li><a href="#demo2" class="button scrolly">Instructions</a></li>
 						</ul>
 					</div>
 				</div>
 			</section>
-			<!-- <section>
-				<a href="#" class="image"><img src="static/images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Ultricies aliquam</h2>
-						<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies
-							erat malesuada quis. Aliquam dapibus.</p>
-						<ul class="actions">
-							<li><a href="generic.html" class="button">Learn more</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-		</section> -->
 
 		<!-- Two -->
-		<section id="two" class="wrapper style3 fade-up">
+		<!-- <section id="demo1" class="wrapper style3 fade-up">
 			<div class="inner">
-				<h2>Instructions for Demo</h2>
+				<h2>Simulation Only Demo</h2>
 				<p>Please complete the below steps to run the demo.</p>
 				<div class="features">
 					<section>
 						<span class="icon solid major fa-code"></span>
 						<h3>Switch on Xarm5</h3>
-						<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-							ultricies erat dapibus.</p>
+						<p>Turn on the switch on the controller box.</p>
 					</section>
 					<section>
 						<span class="icon solid major fa-lock"></span>
-						<h3>Place Red Cube</h3>
-						<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-							ultricies erat dapibus.</p>
+						<h3>Release Emergency Stop Button</h3>
+						<p>Pull the emergency stop button and wait for the sound on the robot.</p>
 					</section>
 					<section>
 						<span class="icon solid major fa-cog"></span>
@@ -137,15 +127,56 @@
 					<button type="submit">Run</button>
 				</form>
 			</div>
+		</section> -->
+		
+		<!-- Two -->
+		<section id="demo2" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>Simulated + Real Demo</h2>
+				<p>Please complete the below steps to run the demo.</p>
+				<div class="features">
+					<section>
+						<span class="icon solid major fa-code"></span>
+						<h3>Switch on Xarm5</h3>
+						<p>Turn on the switch on the controller box.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-lock"></span>
+						<h3>Release Emergency Stop Button</h3>
+						<p>Pull the emergency stop button and wait for the sound on the robot.</p>
+					</section>
+					<section>
+						<span class="icon major fa-gem"></span>
+						<h3>Place red cube</h3>
+						<p>Ensure the red cube is at the target marked on the table.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-cog"></span>
+						<h3>Remove any obtsacles</h3>
+						<p>No obstacles should be near the workspace of the robot.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-link"></span>
+						<h3>Safe Distance</h3>
+						<p>Please maintain a safe distance from the robot while the demo is running.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-desktop"></span>
+						<h3>Digital twin</h3>
+						<p>Click on run below and watch the simulation running parallely on Isaac Sim.</p>
+					</section>
+				</div>
+				<form action="start_demo_real" method="post">
+					<button type="submit">Run</button>
+				</form>
+			</div>
 		</section>
 
 		<!-- Three -->
 		<section id="three" class="wrapper style1 fade-up">
 			<div class="inner">
 				<h2>Get in touch</h2>
-				<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat
-					malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet
-					imperdiet est velit quis lorem.</p>
+				<p>Please leave some feedback.</p>
 				<div class="split style1">
 					<section>
 						<form method="post" action="#">
@@ -172,22 +203,22 @@
 						<ul class="contact">
 							<li>
 								<h3>Address</h3>
-								<span>12345 Somewhere Road #654<br />
-									Nashville, TN 00000-0000<br />
-									USA</span>
+								<span>Boundary Rd N, Third Gait<br />
+									Edinburgh, EH14 4AS<br />
+									UK</span>
 							</li>
 							<li>
 								<h3>Email</h3>
-								<a href="#">user@untitled.tld</a>
+								<a href="#">nr.engineers@hw.ac.uk</a>
 							</li>
 							<li>
 								<h3>Phone</h3>
-								<span>(000) 000-0000</span>
+								<span>+44 (0) 7880227781</span>
 							</li>
 							<li>
 								<h3>Social</h3>
 								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span
+									<li><a href="https://twitter.com/nrobotarium?lang=en" class="icon brands fa-twitter"><span
 												class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span
 												class="label">Facebook</span></a></li>
@@ -195,7 +226,7 @@
 									</li>
 									<li><a href="#" class="icon brands fa-instagram"><span
 												class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-linkedin-in"><span
+									<li><a href="https://www.linkedin.com/company/the-national-robotarium/posts/?feedView=all" class="icon brands fa-linkedin-in"><span
 												class="label">LinkedIn</span></a></li>
 								</ul>
 							</li>

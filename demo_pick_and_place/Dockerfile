@@ -13,6 +13,7 @@ WORKDIR /root/ros2_ws/src/nr_manipulator_software_files/src/xarm_ros2_NR/
 # Update apt-get and install dependencies for rosdep
 
 RUN apt-get update && \
+    apt install apparmor -y && \
     apt-get install -y \
     git \
     && rm -rf /etc/ros/rosdep/sources.list.d/20-default.list

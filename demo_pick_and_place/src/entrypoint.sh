@@ -16,3 +16,13 @@ ros2 launch xarm_planner xarm5_pick_and_place.launch.py
 
 # # Keep the container running (if necessary)
 # exec "$@"
+
+
+if [ "$RUN_MODE" = "real" ]; then
+    echo "Running with real hardware..."
+    # Call your real hardware launch command
+    # exec ./launch_real_hardware.sh
+elif [ "$RUN_MODE" = "sim" ]; then
+    echo "Running simulation..."
+    # Call your simulation launch command
+    # exec ./launch_simulation.sh
