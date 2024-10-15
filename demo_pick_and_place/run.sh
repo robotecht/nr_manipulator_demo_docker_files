@@ -9,6 +9,7 @@ clear &&\
         "\
         "\
             -v ${PWD}/src:/src \
+            -e RUN_MODE=$RUN_MODE \
             --rm \
             --privileged \
             --name demo_pick_and_place \
