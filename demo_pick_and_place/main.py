@@ -32,13 +32,20 @@ def html_page(page_name):
     return render_template(page_name)
 @app.route('/start_demo_sim',methods=['POST','GET'])
 def sim():
-    pick_place_sim()
-    return 'running sim'
+    if request.method == 'POST':
+        pick_place_sim()
+        return redirect('/thankyou.html')
+    else:
+        return 'something went wrong. Try again!'
+
 
 @app.route('/start_demo_real',methods=['POST','GET'])
 def real():
-    pick_place_sim_real()
-    return 'running real'
+    if request.method == 'POST':
+        pick_place_sim_real()
+        return redirect('/thankyou.html')
+    else:
+        return 'something went wrong. Try again!'
 
 @app.route('/submit_form',methods=['POST','GET'])
 def submit_form():

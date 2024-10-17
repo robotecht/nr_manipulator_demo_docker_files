@@ -11,6 +11,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="static/assets/css/main.css" />
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 	<noscript>
 		<link rel="stylesheet" href="static/assets/css/noscript.css" />
 	</noscript>
@@ -45,6 +46,7 @@
 					<!-- <button type="submit">Start Demo</button> -->
 					<ul class="actions">
 						<li><a href="#one" class="button scrolly">Let's Start</a></li>
+						<li><a href="generic.html" class="button scrolly">Learn More</a></li>
 					</ul>
 				</form>
 			</div>
@@ -163,11 +165,12 @@
 					<section>
 						<span class="icon solid major fa-desktop"></span>
 						<h3>Digital twin</h3>
-						<p>Click on run below and watch the simulation running parallely on Isaac Sim.</p>
+						<p>Click on 'RUN' below and watch the simulation running parallely on Isaac Sim.</p>
 					</section>
 				</div>
 				<form action="start_demo_real" method="post">
 					<button type="submit">Run</button>
+					<p>Note : Check the terminal, if the docker container is building, please wait.</p>
 				</form>
 			</div>
 		</section>
