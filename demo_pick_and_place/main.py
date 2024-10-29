@@ -6,11 +6,9 @@ from subprocess import check_output
 
 
 def pick_place_sim():
-    del os.environ['RUN_MODE']
     os.environ['RUN_MODE'] = "sim"
     subprocess.call("run.sh", shell=True)
 def pick_place_sim_real():
-    del os.environ['RUN_MODE']
     os.environ['RUN_MODE'] = "hardware"
     subprocess.call("run.sh", shell=True)
 
