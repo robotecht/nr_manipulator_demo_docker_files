@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=NR Manipulators 
+Comment=Launch the demo ui
+Path=/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place
+Exec= python3 main.py
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+
