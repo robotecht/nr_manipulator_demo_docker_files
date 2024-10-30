@@ -1,4 +1,4 @@
 #!/bin/bash
+firefox http://192.168.1.198:18333
 python3 main.py
-# google-chrome http://127.0.0.1:5000
 $SHELL
