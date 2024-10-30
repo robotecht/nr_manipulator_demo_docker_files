@@ -7,10 +7,10 @@ from subprocess import check_output
 
 def pick_place_sim():
     os.environ['RUN_MODE'] = "sim"
-    subprocess.call("run.sh", shell=True)
+    subprocess.call("/home/nr-ws-1/Desktop/nr_manipulator_demo_docker_files/demo_pick_and_place/run.sh", shell=True)
 def pick_place_sim_real():
     os.environ['RUN_MODE'] = "hardware"
-    subprocess.call("run.sh", shell=True)
+    subprocess.call("/home/nr-ws-1/Desktop/nr_manipulator_demo_docker_files/demo_pick_and_place/run.sh", shell=True)
 
 def write_to_file(data):
     with open('database.txt',mode='a') as database:
@@ -53,3 +53,7 @@ def submit_form():
         return redirect('/thankyou.html')
     else:
         return 'something went wrong. Try again!'
+    
+
+if __name__=="__main__":
+    app.run(host='0.0.0.0',port=4444, debug=True)
