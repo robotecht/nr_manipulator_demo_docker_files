@@ -1,16 +1,21 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 import subprocess
 import os
 from subprocess import Popen, PIPE
-from subprocess import check_output
+
+
+
+
+# Specify the container name or ID
+CONTAINER_NAME = "demo_pick_and_place"
 
 
 def pick_place_sim():
     os.environ['RUN_MODE'] = "sim"
-    subprocess.call("/home/nr-ws-1/Desktop/nr_manipulator_demo_docker_files/demo_pick_and_place/run.sh", shell=True)
+    subprocess.call("/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/run.sh", shell=True)
 def pick_place_sim_real():
     os.environ['RUN_MODE'] = "hardware"
-    subprocess.call("/home/nr-ws-1/Desktop/nr_manipulator_demo_docker_files/demo_pick_and_place/run.sh", shell=True)
+    subprocess.call("/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/run.sh", shell=True)
 
 def write_to_file(data):
     with open('database.txt',mode='a') as database:
@@ -32,7 +37,7 @@ def html_page(page_name):
 def sim():
     if request.method == 'POST':
         pick_place_sim()
-        return redirect('/thankyou.html')
+        return redirect('/index.html')
     else:
         return 'something went wrong. Try again!'
 
@@ -41,7 +46,7 @@ def sim():
 def real():
     if request.method == 'POST':
         pick_place_sim_real()
-        return redirect('/thankyou.html')
+        return redirect('/index.html')
     else:
         return 'something went wrong. Try again!'
 
@@ -53,6 +58,12 @@ def submit_form():
         return redirect('/thankyou.html')
     else:
         return 'something went wrong. Try again!'
+    
+@app.route('/stop_container', methods=['POST'])
+def stop_demo():
+    subprocess.call(f"sudo docker kill {CONTAINER_NAME}", shell=True)
+    return redirect('/thankyou.html')
+    
     
 
 if __name__=="__main__":

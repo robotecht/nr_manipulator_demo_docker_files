@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/home/coena98/Downloads/chatty_sdk/cerevoice_eng",
+        "/home/coena98/Downloads/chatty_sdk/cerevoice_eng"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/home/coena98/Downloads/chatty_sdk/cerevoice_eng",
+        "/home/coena98/Downloads/chatty_sdk/cerevoice_eng"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/humble/include/**",
+        "/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/src/nr_manipulator_software_files/src/xarm_ros2_NR/thirdparty/realsense_gazebo_plugin/include/**",
+        "/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/src/nr_manipulator_software_files/src/xarm_ros2_NR/xarm_api/include/**",
+        "/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/src/nr_manipulator_software_files/src/xarm_ros2_NR/xarm_controller/include/**",
+        "/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/src/nr_manipulator_software_files/src/xarm_ros2_NR/xarm_gazebo/include/**",
+        "/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/src/nr_manipulator_software_files/src/xarm_ros2_NR/xarm_moveit_servo/include/**",
+        "/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/src/nr_manipulator_software_files/src/xarm_ros2_NR/xarm_planner/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

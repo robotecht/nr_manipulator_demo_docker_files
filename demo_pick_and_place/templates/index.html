@@ -41,7 +41,8 @@
 		<section id="intro" class="wrapper style1 fullscreen fade-up">
 			<div class="inner">
 				<h1>Pick and Place Demo</h1>
-				<p>Watch a simple yet efficient pick-and-place task in action, moving seamlessly from fixed position A to B.</p>
+				<p>Watch a simple yet efficient pick-and-place task in action, moving seamlessly from fixed position A
+					to B.</p>
 				<form action="start_demo" method="post">
 					<!-- <button type="submit">Start Demo</button> -->
 					<ul class="actions">
@@ -55,16 +56,30 @@
 		<!-- One -->
 		<section id="one" class="wrapper style2 spotlights">
 			<section>
-				<a href="#" class="image"><img src="static/assets/images/xarm_sim.jpg" alt="" data-position="center center" /></a>
+				<a href="#" class="image"><img src="static/assets/images/simxarm_tdmpc.gif" alt=""
+						data-position="center center" /></a>
 				<div class="content">
 					<div class="inner">
 						<h2>Simulated</h2>
 						<p>Do you want to run the demo in simulation?
 							No instructions required, just run the demo.
 						</p>
-						<form action="start_demo_sim" method="post">
-							<button type="submit">Run</button>
-						</form>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<ul class="actions">
+									<li>
+										<form action="start_demo_sim" method="post">
+											<button type="submit">Run</button>
+										</form>
+									</li>
+									<li>
+										<form action="stop_container" method="post">
+											<button class="button primary" type="submit">Stop</button>
+										</form>
+									</li>
+								</ul>
+							</div>
+						</div>
 						<!-- <ul class="actions">
 							<li><a href="#demo1" class="button">Instructions</a></li>
 						</ul> -->
@@ -72,7 +87,8 @@
 				</div>
 			</section>
 			<section>
-				<a href="#" class="image"><img src="static/assets/images/xarm5.jpg" alt="" data-position="top center" /></a>
+				<a href="#" class="image"><img src="static/assets/images/xarm5.jpg" alt=""
+						data-position="top center" /></a>
 				<div class="content">
 					<div class="inner">
 						<h2>Simulated and Real</h2>
@@ -84,8 +100,8 @@
 				</div>
 			</section>
 
-		<!-- Two -->
-		<!-- <section id="demo1" class="wrapper style3 fade-up">
+			<!-- Two -->
+			<!-- <section id="demo1" class="wrapper style3 fade-up">
 			<div class="inner">
 				<h2>Simulation Only Demo</h2>
 				<p>Please complete the below steps to run the demo.</p>
@@ -130,114 +146,132 @@
 				</form>
 			</div>
 		</section> -->
-		
-		<!-- Two -->
-		<section id="demo2" class="wrapper style3 fade-up">
-			<div class="inner">
-				<h2>Simulated + Real Demo</h2>
-				<p>Please complete the below steps to run the demo.</p>
-				<div class="features">
-					<section>
-						<span class="icon solid major fa-link"></span>
-						<h3>Switch on Xarm5</h3>
-						<p>Turn on the switch on the controller box.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-lock"></span>
-						<h3>Release Emergency Stop Button</h3>
-						<p>Pull the emergency stop button and wait for the sound on the robot.</p>
-					</section>
-					<section>
-						<span class="icon major fa-gem"></span>
-						<h3>Place red cube</h3>
-						<p>Ensure the red cube is at the target marked on the table.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-cog"></span>
-						<h3>Remove any obtsacles</h3>
-						<p>No obstacles should be near the workspace of the robot.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-code"></span>
-						<h3>Safe Distance</h3>
-						<p>Please maintain a safe distance from the robot while the demo is running.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-desktop"></span>
-						<h3>Digital twin</h3>
-						<p>Click on 'RUN' below and watch the simulation running parallely on Isaac Sim.</p>
-					</section>
-				</div>
-				<form action="start_demo_real" method="post">
-					<button type="submit">Run</button>
-					<p>Note : Check the terminal, if the docker container is building, please wait.</p>
-				</form>
-			</div>
-		</section>
 
-		<!-- Three -->
-		<section id="three" class="wrapper style1 fade-up">
-			<div class="inner">
-				<h2>Get in touch</h2>
-				<p>Please leave some feedback.</p>
-				<div class="split style1">
-					<section>
-						<form method="post" action="submit_form">
-							<div class="fields">
-								<div class="field half">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
-								</div>
-								<div class="field half">
-									<label for="email">Email</label>
-									<input type="text" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="5"></textarea>
-								</div>
-							</div>
+			<!-- Two -->
+			<section id="demo2" class="wrapper style3 fade-up">
+				<div class="inner">
+					<h2>Simulated + Real Demo</h2>
+					<p>Please verify the below steps to run the demo.</p>
+					<div class="features">
+						<section>
+							<span class="icon solid major fa-link"></span>
+							<h3>Switched on Xarm5</h3>
+							<p>Check the Xarm5 is turned on. This is shown by the green light on the controller box.</p>
+						</section>
+						<section>
+							<span class="icon solid major fa-lock"></span>
+							<h3>Press Emergency Stop Button</h3>
+							<p>Emergency Stop button must be at a close distance to the user so it can be pressed easily
+								during emergency.</p>
+						</section>
+						<section>
+							<span class="icon major fa-gem"></span>
+							<h3>Place red cube</h3>
+							<p>Ensure the red cube is at the target marked on the table.</p>
+						</section>
+						<section>
+							<span class="icon solid major fa-cog"></span>
+							<h3>Remove any obtsacles</h3>
+							<p>No obstacles should be near the workspace of the robot.</p>
+						</section>
+						<section>
+							<span class="icon solid major fa-code"></span>
+							<h3>Safe Distance</h3>
+							<p>Please maintain a safe distance from the robot while the demo is running.</p>
+						</section>
+						<section>
+							<span class="icon solid major fa-desktop"></span>
+							<h3>Digital twin</h3>
+							<p>Click on 'RUN' below and watch the simulation running parallely on Isaac Sim.</p>
+						</section>
+					</div>
+					<div class="row">
+						<p>Note : Check the terminal, if the docker container is building, please wait.</p>
+						<div class="col-6 col-12-medium">
 							<ul class="actions">
-								<li><a href="" class="button submit">Send Message</a></li>
+								<li>
+									<form action="start_demo_real" method="post">
+										<button type="submit">Run</button>
+									</form>
+								</li>
+								<li>
+									<form action="stop_container" method="post">
+										<button class="button primary" type="submit">Stop</button>
+									</form>
+								</li>
 							</ul>
-						</form>
-					</section>
-					<section>
-						<ul class="contact">
-							<li>
-								<h3>Address</h3>
-								<span>Boundary Rd N, Third Gait<br />
-									Edinburgh, EH14 4AS<br />
-									UK</span>
-							</li>
-							<li>
-								<h3>Email</h3>
-								<a href="#">nr.engineers@hw.ac.uk</a>
-							</li>
-							<li>
-								<h3>Phone</h3>
-								<span>+44 (0) 7880227781</span>
-							</li>
-							<li>
-								<h3>Social</h3>
-								<ul class="icons">
-									<li><a href="https://twitter.com/nrobotarium?lang=en" class="icon brands fa-twitter"><span
-												class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span
-												class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a>
-									</li>
-									<li><a href="#" class="icon brands fa-instagram"><span
-												class="label">Instagram</span></a></li>
-									<li><a href="https://www.linkedin.com/company/the-national-robotarium/posts/?feedView=all" class="icon brands fa-linkedin-in"><span
-												class="label">LinkedIn</span></a></li>
-								</ul>
-							</li>
-						</ul>
-					</section>
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
+				
+			</section>
+
+			<!-- Three -->
+			<section id="three" class="wrapper style1 fade-up">
+				<div class="inner">
+					<h2>Get in touch</h2>
+					<p>Please leave some feedback.</p>
+					<div class="split style1">
+						<section>
+							<form method="post" action="submit_form">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="5"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><a href="" class="button submit">Send Message</a></li>
+								</ul>
+							</form>
+						</section>
+						<section>
+							<ul class="contact">
+								<li>
+									<h3>Address</h3>
+									<span>Boundary Rd N, Third Gait<br />
+										Edinburgh, EH14 4AS<br />
+										UK</span>
+								</li>
+								<li>
+									<h3>Email</h3>
+									<a href="#">nr.engineers@hw.ac.uk</a>
+								</li>
+								<li>
+									<h3>Phone</h3>
+									<span>+44 (0) 7880227781</span>
+								</li>
+								<li>
+									<h3>Social</h3>
+									<ul class="icons">
+										<li><a href="https://twitter.com/nrobotarium?lang=en"
+												class="icon brands fa-twitter"><span class="label">Twitter</span></a>
+										</li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span
+													class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span
+													class="label">GitHub</span></a>
+										</li>
+										<li><a href="#" class="icon brands fa-instagram"><span
+													class="label">Instagram</span></a></li>
+										<li><a href="https://www.linkedin.com/company/the-national-robotarium/posts/?feedView=all"
+												class="icon brands fa-linkedin-in"><span
+													class="label">LinkedIn</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</section>
 
 	</div>
 
