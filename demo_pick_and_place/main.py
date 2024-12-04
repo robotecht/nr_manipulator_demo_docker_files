@@ -4,7 +4,7 @@ import os
 from subprocess import Popen, PIPE
 
 
-
+cwd = os.getcwd()
 
 # Specify the container name or ID
 CONTAINER_NAME = "demo_pick_and_place"
@@ -12,10 +12,10 @@ CONTAINER_NAME = "demo_pick_and_place"
 
 def pick_place_sim():
     os.environ['RUN_MODE'] = "sim"
-    subprocess.call("/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/run.sh", shell=True)
+    subprocess.call(f"{cwd}/run.sh", shell=True)
 def pick_place_sim_real():
     os.environ['RUN_MODE'] = "hardware"
-    subprocess.call("/home/coena98/room_scanning/nr_manipulator_demo_docker_files/demo_pick_and_place/run.sh", shell=True)
+    subprocess.call(f"{cwd}/run.sh", shell=True)
 
 def write_to_file(data):
     with open('database.txt',mode='a') as database:
