@@ -39,3 +39,7 @@ def generate_launch_description() -> LaunchDescription:
         ),
     ]
     return LaunchDescription(nodes)
+
+
+# line camera links up
+# check qutarnions calculations (qx, qy, qz, qw) - convert to rotation matrix, do trial and error, align the axis. 
