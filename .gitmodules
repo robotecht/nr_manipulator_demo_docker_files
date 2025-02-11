@@ -1,3 +1,6 @@
 [submodule "demo_pick_and_place/src/nr_manipulator_software_files"]
 	path = demo_pick_and_place/src/nr_manipulator_software_files
 	url = https://github.com/coenadasNR/nr_manipulator_software_files.git
+[submodule "demo_vision_pick_and_place/src/xarm_ros2"]
+	path = demo_vision_pick_and_place/src/xarm_ros2
+	url = git@github.com:xArm-Developer/xarm_ros2.git
